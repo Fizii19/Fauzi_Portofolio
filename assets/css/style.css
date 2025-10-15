@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Montserrat:wght@100..900&family=Unbounded:wght@200..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-family: "Host Grotesk", "Arial";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Unbounded";
+  color: white;
+}
+p {
+  color: white;
+  font-family: "Host Grotesk";
+  font-size: small;
+}
+
+:root {
+  --biru: #1d84ff;
+  --kuning: #ffb600;
+}
+
+nav {
+  display: flex;
+  top: 0;
+  z-index: 1000;
+  position: sticky;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: var(--biru);
+}
+
+.logo a {
+  font-family: "Unbounded";
+  font-weight: bold;
+  padding: 3px 5px;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.logo a:hover {
+  background-color: #1464c5;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 700px;
+  margin-left: 540px;
+}
+
+.nav-menu ul li a {
+  padding: 3px 5px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav-menu ul li a:hover {
+  background-color: #1464c5;
+}
+
+.btn-contact {
+  padding: 5px 10px;
+  background-color: var(--kuning);
+  border-radius: 4rem;
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+  color: black;
+}
+
+.nav-menu .btn-contact:hover {
+  transform: translateX(5px) translateY(5px);
+  box-shadow: 0px 0px black;
+}
+
+.nav-menu ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-menu ul li {
+  padding: 10px;
+}
+
+.hero {
+  position: relative;
+  margin-top: 0;
+  top: 0;
+  height: 94vh;
+  background-color: var(--biru);
+  border-radius: 0 0 20rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+.deskripsi {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+.deskripsi .hiasan {
+  border-radius: 1rem;
+  color: black;
+  border: 2px solid black;
+  width: 45%;
+  text-align: center;
+  padding: 2px;
+  font-size: smaller;
+  background-color: var(--kuning);
+  box-shadow: 5px 5px black;
+}
+
+.deskripsi .hiasan:hover {
+  transform: translateX(5px) translateY(5px);
+  box-shadow: 0px 0px black;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.skill a {
+  border: 1.5px solid white;
+  border-radius: 2rem;
+  padding: 2px 5px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+  transition: color, border 0.3s ease;
+}
+
+.skill a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--kuning);
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.skill a:hover {
+  color: black;
+  border: 1.5px solid black;
+}
+
+.skill a:hover::before {
+  width: 100%;
+}
+
+.tombol-next {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: -5px;
+}
+
+.tombol-next a {
+  border: 1.5px solid black;
+  border-radius: 1rem;
+  padding: 3px 5px;
+  color: black;
+  background-color: var(--kuning);
+  box-shadow: 5px 5px black;
+}
+
+.tombol-next a:hover {
+  box-shadow: 0 0 black;
+  transform: translateY(5px) translateX(5px);
+}
+
+.sosmed {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.sosmed i {
+  padding: 3px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.foto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrap-foto {
+  background-color: transparent;
+  border-radius: 50%;
+  top: -50%;
+  left: -50%;
+  height: 55%;
+  overflow: hidden;
+  border: 2px solid black;
+}
+.hero .foto .wrap-foto img {
+  width: 300px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.projects .heading p:nth-child(1) {
+  color: black;
+  font-size: 40px;
+  text-align: center;
+}
+
+.projects .heading p span:nth-child(1) {
+  font-weight: bold;
+}
+
+.projects .heading p:nth-child(2) {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.projects .heading p:nth-child(3) {
+  color: black;
+  text-align: center;
+  font-size: large;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 0;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to right, rgb(15, 30, 49));
+  transition: height 0.2s;
+  z-index: -1;
+}
+
+.card:hover::after {
+  height: 55px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card .thumbnail img {
+  width: 500px;
+  position: relative;
+  z-index: -1;
+  margin-left: -90px;
+}
+
+.desk-card {
+  margin-top: -85px;
+  padding: 0 0 15px 0;
+  z-index: 10;
+  text-align: center;
+  background: linear-gradient(to top, rgb(15, 30, 49, 1), rgba(0, 0, 0, 0));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.desk-card:hover {
+  background-color: rgb(15, 30, 49);
+}
+
+.card-project {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 50px;
+}
